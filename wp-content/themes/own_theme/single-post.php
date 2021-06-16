@@ -2,7 +2,7 @@
     <div class="top-section">
 
         <div class="container">
-            <h1><a href="#">המדריך למוכרים בלבד</a></h1>
+            <h1><a href="<?php echo get_home_url()?>">המדריך למוכרים בלבד</a></h1>
             <p> טיפים חשובים לניהול חנות אונליין</p>
         </div>
     </div>
@@ -25,7 +25,7 @@
             <div class="blog-content">
                 <span class="data"><?php the_time('Y. F . m');?></span>
                 <h2><?php the_title()?></h2>
-                <h4><img src="<?php echo get_template_directory_uri()?>/assets/images/img6.jpg"></h4>
+                <h4><img src="<?php echo get_the_post_thumbnail_url()?>"></h4>
                 <p>&nbsp;</p>
                 <p>בהמשך לעדכונים האחרונים – החל מהיום, ולמשך שבועיים, לא תוכלו לבצע פעולות בחנותכם. פעולות רכישה וקניה יתאפשרו כרגיל.</p>
                 <p>ובינתיים, אתם מוזמנים להיכנס לחנותכם בממשק החדש!&nbsp;להתרשם, להכיר ולהתרגל (:</p>

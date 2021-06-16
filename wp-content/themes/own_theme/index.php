@@ -10,13 +10,16 @@
     <div class="container">
 
         <div class="blog-content">
-            <?php
+            <?
+
+
+
             if (have_posts()) {
                 while (have_posts()):
                     the_post();?>
                     <div class="item">
                         <a href="#" class="wrapper-img"><img
-                                src="<?= get_template_directory_uri() ?>/assets/images/img1.jpg"
+                                src="<?php echo get_the_post_thumbnail_url() ?>"
                                 alt=""></a>
                         <div class="text-block-blog">
                             <span class="data"><?php the_time('Y, F j'); ?></span>
@@ -33,80 +36,79 @@
             ?>
 
 
-            <div class="item">
-                <a href="#" class="wrapper-img"><img src="<?= get_template_directory_uri() ?>/assets/images/img1.jpg"
-                                                     alt=""></a>
-                <div class="text-block-blog">
-                    <span class="data">22 בדצמבר, 2019</span>
-                    <h2><a href="#">יש לכם גישה חדשה</a></h2>
-                    <p>&nbsp; בהמשך לעדכונים האחרונים – החל מהיום, ולמשך שבועיים, לא תוכלו לבצע פעולות בחנותכם. פעולות
-                        רכישה וקניה יתאפשרו כרגיל. ובינתיים, אתם מוזמנים להיכנס לחנותכם בממשק החדש!&nbsp;להתרשם, להכיר
-                        ולהתרגל (: תוכלו לבצע פעולות בממשק החדש (להעלות מוצרים וכו’)&nbsp;– רק זכרו כל שינוי שתבצעו יבוא
-                        לידי ביטוי בחנות כשנעלה לאוויר. איך עושים את זה? נכנסים ללינק הזה […]</p>
-                    <a href="#">המאמר המלא</a>
-                </div>
-            </div>
-            <div class="item">
-                <a href="#" class="wrapper-img"><img src="<?= get_template_directory_uri() ?>/assets/images/img2.jpg"
-                                                     alt=""></a>
-                <div class="text-block-blog">
-                    <span class="data">22 בדצמבר, 2019</span>
-                    <h2><a href="#">תגידו יפה שלום לממשק החדש שלכם</a></h2>
-                    <p>מוכרות ומוכרים יקרות ויקרים! &nbsp; בהמשך לבשורה המשמחת ששלחנו לכם בשבוע&nbsp;שעבר, אנחנו כאן כדי
-                        לעדכן שבקרוב ניכנס ליישורת האחרונה לפני שנעלה לאוויר עם ממשק הניהול החדש שלכם ושלנו. ביום שני
-                        23.12, נתחיל במהלך האחרון והקריטי לפני העלייה לאוויר, במסגרתו יועברו כל הנתונים האחרונים מהממשק
-                        הישן לממשק החדש. לכן, עד לסיום העברת הנתונים והשלמת המהלך – […]</p>
-                    <a href="#">המאמר המלא</a>
-                </div>
-            </div>
-            <div class="item">
-                <a href="#" class="wrapper-img"><img src="<?= get_template_directory_uri() ?>/assets/images/img3.jpg"
-                                                     alt=""></a>
-                <div class="text-block-blog">
-                    <span class="data">20 בנובמבר, 2019</span>
-                    <h2><a href="#">חושבים על מוצר חדש? קבלו 5 טיפים שיעזרו לכם להבריק</a></h2>
-                    <p>קחו רגע לקרוא את המדריך הבא – שיבטיח שהמוצר הבא שלכם יהיה מוצר מנצח</p>
-                    <a href="#">המאמר המלא</a>
-                </div>
-            </div>
-            <div class="item">
-                <a href="#" class="wrapper-img"><img src="<?= get_template_directory_uri() ?>/assets/images/img4.jpg"
-                                                     alt=""></a>
-                <div class="text-block-blog">
-                    <span class="data">19 בנובמבר, 2019</span>
-                    <h2><a href="#">רוצה למכור באינטרנט לקהל הישראלי? המדריך למתחילים</a></h2>
-                    <p>כל מה שצריך לדעת כדי להתחיל למכור את מה שאתם מעצבים, מייצרים או מייבאים באינטרנט. מה למכור? איך
-                        משיגים לקוחות? איך מתמחרים? איך שולחים? איך מקבלים פידבקים טובים שיימשכו עוד לקוחות? כל זאת ועוד
-                        במדריך שלפניכם</p>
-                    <a href="#">המאמר המלא</a>
-                </div>
-            </div>
-            <div class="item">
-                <a href="#" class="wrapper-img"><img src="<?= get_template_directory_uri() ?>/assets/images/img5.jpg"
-                                                     alt=""></a>
-                <div class="text-block-blog">
-                    <span class="data">18 בנובמבר, 2019</span>
-                    <h2><a href="#">טור אורח: איך לבנות תכנית עסקית חכמה?</a></h2>
-                    <p>תכנית עסקית מוצלחת היא הכרחית לכל עסק, קטן כגדול. איך עושים זאת? מהם היסודות לתכנית שכזאת? ואיך
-                        היא יכולה לתת לכם התחלה טובה יותר? טור אורח של ירון לוי, יועץ לעסקים קטנים ובינוניים והבעלים של
-                        לוי ייעוץ כלכלי ועסקי</p>
-                    <a href="#">המאמר המלא</a>
-                </div>
-            </div>
-            <div class="item">
-                <a href="#" class="wrapper-img"><img src="<?= get_template_directory_uri() ?>/assets/images/img6.jpg"
-                                                     alt=""></a>
-                <div class="text-block-blog">
-                    <span class="data">17 בנובמבר, 2019</span>
-                    <h2><a href="#">7 דרכים להרוויח לקוחות מרוצים</a></h2>
-                    <p>בחנות אינטרנטית, שירות הוא הכל - הוא מתחיל בתיאור מפורט של המוצר וממשיך גם לאחר שהמוצר כבר נשלח.
-                        אז איך לתת את השירות הכי טוב שיש? &nbsp;</p>
-                    <a href="#">המאמר המלא</a>
-                </div>
-            </div>
-            <?php /**TODO не работает пагинация, мать ее - разобраться
-             */ ?>
-            <?php get_the_posts_pagination() ?>
+<!--            <div class="item">-->
+<!--                <a href="#" class="wrapper-img"><img src="--><?//= get_template_directory_uri() ?><!--/assets/images/img1.jpg"-->
+<!--                                                     alt=""></a>-->
+<!--                <div class="text-block-blog">-->
+<!--                    <span class="data">22 בדצמבר, 2019</span>-->
+<!--                    <h2><a href="#">יש לכם גישה חדשה</a></h2>-->
+<!--                    <p>&nbsp; בהמשך לעדכונים האחרונים – החל מהיום, ולמשך שבועיים, לא תוכלו לבצע פעולות בחנותכם. פעולות-->
+<!--                        רכישה וקניה יתאפשרו כרגיל. ובינתיים, אתם מוזמנים להיכנס לחנותכם בממשק החדש!&nbsp;להתרשם, להכיר-->
+<!--                        ולהתרגל (: תוכלו לבצע פעולות בממשק החדש (להעלות מוצרים וכו’)&nbsp;– רק זכרו כל שינוי שתבצעו יבוא-->
+<!--                        לידי ביטוי בחנות כשנעלה לאוויר. איך עושים את זה? נכנסים ללינק הזה […]</p>-->
+<!--                    <a href="#">המאמר המלא</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="item">-->
+<!--                <a href="#" class="wrapper-img"><img src="--><?//= get_template_directory_uri() ?><!--/assets/images/img2.jpg"-->
+<!--                                                     alt=""></a>-->
+<!--                <div class="text-block-blog">-->
+<!--                    <span class="data">22 בדצמבר, 2019</span>-->
+<!--                    <h2><a href="#">תגידו יפה שלום לממשק החדש שלכם</a></h2>-->
+<!--                    <p>מוכרות ומוכרים יקרות ויקרים! &nbsp; בהמשך לבשורה המשמחת ששלחנו לכם בשבוע&nbsp;שעבר, אנחנו כאן כדי-->
+<!--                        לעדכן שבקרוב ניכנס ליישורת האחרונה לפני שנעלה לאוויר עם ממשק הניהול החדש שלכם ושלנו. ביום שני-->
+<!--                        23.12, נתחיל במהלך האחרון והקריטי לפני העלייה לאוויר, במסגרתו יועברו כל הנתונים האחרונים מהממשק-->
+<!--                        הישן לממשק החדש. לכן, עד לסיום העברת הנתונים והשלמת המהלך – […]</p>-->
+<!--                    <a href="#">המאמר המלא</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="item">-->
+<!--                <a href="#" class="wrapper-img"><img src="--><?//= get_template_directory_uri() ?><!--/assets/images/img3.jpg"-->
+<!--                                                     alt=""></a>-->
+<!--                <div class="text-block-blog">-->
+<!--                    <span class="data">20 בנובמבר, 2019</span>-->
+<!--                    <h2><a href="#">חושבים על מוצר חדש? קבלו 5 טיפים שיעזרו לכם להבריק</a></h2>-->
+<!--                    <p>קחו רגע לקרוא את המדריך הבא – שיבטיח שהמוצר הבא שלכם יהיה מוצר מנצח</p>-->
+<!--                    <a href="#">המאמר המלא</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="item">-->
+<!--                <a href="#" class="wrapper-img"><img src="--><?//= get_template_directory_uri() ?><!--/assets/images/img4.jpg"-->
+<!--                                                     alt=""></a>-->
+<!--                <div class="text-block-blog">-->
+<!--                    <span class="data">19 בנובמבר, 2019</span>-->
+<!--                    <h2><a href="#">רוצה למכור באינטרנט לקהל הישראלי? המדריך למתחילים</a></h2>-->
+<!--                    <p>כל מה שצריך לדעת כדי להתחיל למכור את מה שאתם מעצבים, מייצרים או מייבאים באינטרנט. מה למכור? איך-->
+<!--                        משיגים לקוחות? איך מתמחרים? איך שולחים? איך מקבלים פידבקים טובים שיימשכו עוד לקוחות? כל זאת ועוד-->
+<!--                        במדריך שלפניכם</p>-->
+<!--                    <a href="#">המאמר המלא</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="item">-->
+<!--                <a href="#" class="wrapper-img"><img src="--><?//= get_template_directory_uri() ?><!--/assets/images/img5.jpg"-->
+<!--                                                     alt=""></a>-->
+<!--                <div class="text-block-blog">-->
+<!--                    <span class="data">18 בנובמבר, 2019</span>-->
+<!--                    <h2><a href="#">טור אורח: איך לבנות תכנית עסקית חכמה?</a></h2>-->
+<!--                    <p>תכנית עסקית מוצלחת היא הכרחית לכל עסק, קטן כגדול. איך עושים זאת? מהם היסודות לתכנית שכזאת? ואיך-->
+<!--                        היא יכולה לתת לכם התחלה טובה יותר? טור אורח של ירון לוי, יועץ לעסקים קטנים ובינוניים והבעלים של-->
+<!--                        לוי ייעוץ כלכלי ועסקי</p>-->
+<!--                    <a href="#">המאמר המלא</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="item">-->
+<!--                <a href="#" class="wrapper-img"><img src="--><?//= get_template_directory_uri() ?><!--/assets/images/img6.jpg"-->
+<!--                                                     alt=""></a>-->
+<!--                <div class="text-block-blog">-->
+<!--                    <span class="data">17 בנובמבר, 2019</span>-->
+<!--                    <h2><a href="#">7 דרכים להרוויח לקוחות מרוצים</a></h2>-->
+<!--                    <p>בחנות אינטרנטית, שירות הוא הכל - הוא מתחיל בתיאור מפורט של המוצר וממשיך גם לאחר שהמוצר כבר נשלח.-->
+<!--                        אז איך לתת את השירות הכי טוב שיש? &nbsp;</p>-->
+<!--                    <a href="#">המאמר המלא</a>-->
+<!--                </div>-->
+<!--            </div>-->
+            <?php echo wp_link_pages(); ?>
+            <?php the_posts_pagination() ?>
             <!--            <nav class="navigation pagination" role="navigation">-->
             <!--                <div class="nav-links"><span aria-current="page" class="page-numbers current">1</span>-->
             <!--                    <a class="page-numbers" href="#">2</a>-->
