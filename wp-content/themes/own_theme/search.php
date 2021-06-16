@@ -26,8 +26,19 @@
                         </div>
                     </div>
                 <?php endwhile;
-            } else {
-                // Постов не найдено
+            } else {?>
+                <div class="item">
+                    <a href="#" class="wrapper-img"><img
+                            src="<?= get_template_directory_uri()?>/assets/images/nothing.jpg"
+                            alt=""></a>
+                    <div class="text-block-blog">
+                        <span class="data"><?php the_time('Y, F j'); ?></span>
+                        <h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+                        <p><?php echo "-----------------Nothing to show-----------------"; ?></p>
+
+                    </div>
+                </div>
+                <?php
             }
             ?>
             <?php the_posts_pagination() ?>
