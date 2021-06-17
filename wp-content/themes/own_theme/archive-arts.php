@@ -21,7 +21,6 @@
                         <div class="text-block-blog">
                             <span class="data"><?php the_time('Y, F j'); ?></span>
                             <h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
-
                             <p><?php the_content(); ?></p>
                             <a href="<?php the_permalink();?>">המאמר המלא</a>
                         </div>
@@ -52,3 +51,4 @@
 </div>
 </div>
 <?php get_footer() ?>
+
