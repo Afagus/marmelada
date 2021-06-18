@@ -86,27 +86,24 @@ function create_post_type()
 add_action('init', 'create_post_type');
 
 
-function myownwidget()
-{
-    register_sidebar(array(
-            'name' => esc_html__(),
-            'id' => '',
-            'description' => '',
-            'class'=>'',
-            'before_widget'=>'',
-            'after_widget'=>'',
-            'before_title'=>'',
-            'after_title'=>'',
-            'before_sidebar'=>'',
-            'after_sidebar'=>'',
-
+function marmelada_widgets_init() {
+    register_sidebar(
+        array(
+            'name'          => esc_html__( 'Sidebar', 'marmelada' ),
+            'id'            => 'ownsidebar',
+            'description'   => esc_html__( 'Add widgets here.', 'marmelada' ),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h2 style="display: none" class="widget-title">',
+            'after_title'   => '</h2>',
         )
-
     );
 }
+add_action( 'widgets_init', 'marmelada_widgets_init' );
 
-;
-//add_action('widgets_init', 'myownwidget');
-
-
+/**
+ * Add my own widget
+ */
+require get_template_directory() . '/widgets/widgets.php';
+require get_template_directory() . '/widgets/widget-info.php';
 

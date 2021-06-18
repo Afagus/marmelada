@@ -34,19 +34,20 @@
             <?php the_posts_pagination() ?>
         </div>
         <aside class="side-section">
-            <?php wp_nav_menu(array(
-                'theme_location' => 'aside-menu',
-                'menu' => '',
-                'container' => '',
-                'container_class' => '',
-                'container_id' => '',
-            )) ?>
+            <?php get_sidebar('ownsidebar')?>
+<!--            --><?php //wp_nav_menu(array(
+//                'theme_location' => 'aside-menu',
+//                'menu' => '',
+//                'container' => '',
+//                'container_class' => '',
+//                'container_id' => '',
+//            )) ?>
 
-            <div class="info-block">
-                <h3>היי... משהו חשוב:</h3>
-                <p>מעוניינים להגדיל את המכירות בחנות שלכם מבלי לעבוד קשה מדי? בדקו את ה-תוכנית</p>
-                <a class="text-color" href="#" target="_blank">הקפצת המוצרים האוטומטית הטרייה והחדשה</a>
-            </div>
+<!--            <div class="info-block">-->
+<!--                <h3>היי... משהו חשוב:</h3>-->
+<!--                <p></p>-->
+<!--                <a class="text-color" href="#" target="_blank">הקפצת המוצרים האוטומטית הטרייה והחדשה</a>-->
+<!--            </div>-->
         </aside>
     </div>
 </div>
