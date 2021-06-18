@@ -82,6 +82,9 @@ class Info_Widget extends WP_Widget
         </table>
 
         <?php
+        /**
+         * TODO доделать ссылку в инфоблоке, разобраться и сделать страницу опций
+        */
     }
 
     /**
