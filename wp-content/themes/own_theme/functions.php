@@ -84,7 +84,9 @@ function create_post_type()
 }
 
 add_action('init', 'create_post_type');
-
+/**
+ * Here we make sidebar
+*/
 
 function marmelada_widgets_init() {
     register_sidebar(
@@ -106,4 +108,59 @@ add_action( 'widgets_init', 'marmelada_widgets_init' );
  */
 require get_template_directory() . '/widgets/widgets.php';
 require get_template_directory() . '/widgets/widget-info.php';
+
+
+/**
+ * Реализация страницы опций
+ */
+
+function marmelada_option_page(){
+    add_options_page('Own page of settings', 'Some setting', 'manage_options', 'marmelada_options', 'marmelada_api_options_page');
+}
+
+function marmelada_api_setting_init()
+{
+
+    register_setting('marmeladaCustom', 'marmelada_api_settings');
+    add_settings_section(
+        'marmelada_api_marmeladaCustom_section',
+        __( 'Секция 1', 'wordpress' ),
+        'marmelada_api_settings_section_callback',
+        'marmeladaCustom'
+    );
+    add_settings_field(
+        'marmelada_api_text_field_0',
+        __( 'Опция 1', 'wordpress' ),
+        'marmelada_api_text_field_0_render',
+        'marmeladaCustom',
+        'marmelada_api_marmeladaCustom_section'
+    );
+}
+
+function marmelada_api_text_field_0_render( ) {
+    $options = get_option( 'marmelada_api_settings' );
+    ?>
+    <input type='text' name='marmelada_api_settings[marmelada_api_text_field_0]' value='<?php echo $options['marmelada_api_text_field_0']; ?>'>
+    <?php
+}
+function marmelada_api_settings_section_callback( ) {
+    echo __( 'Описание для секции настроек', 'wordpress' );
+}
+
+function marmelada_api_options_page( ) {
+    ?>
+    <form action='options.php' method='post'>
+        <h2>Дополнительная страница настроек</h2>
+        <?php
+        settings_fields( 'marmeladaCustom' );
+        do_settings_sections( 'marmeladaCustom' );
+        submit_button();
+        ?>
+    </form>
+    <?php
+}
+
+add_action('admin_menu', 'marmelada_option_page');
+add_action('admin_init', 'marmelada_api_setting_init');
+
 

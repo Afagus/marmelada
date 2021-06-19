@@ -35,19 +35,6 @@
         </div>
         <aside class="side-section">
             <?php get_sidebar('ownsidebar')?>
-<!--            --><?php //wp_nav_menu(array(
-//                'theme_location' => 'aside-menu',
-//                'menu' => '',
-//                'container' => '',
-//                'container_class' => '',
-//                'container_id' => '',
-//            )) ?>
-
-<!--            <div class="info-block">-->
-<!--                <h3>היי... משהו חשוב:</h3>-->
-<!--                <p></p>-->
-<!--                <a class="text-color" href="#" target="_blank">הקפצת המוצרים האוטומטית הטרייה והחדשה</a>-->
-<!--            </div>-->
         </aside>
     </div>
 </div>
