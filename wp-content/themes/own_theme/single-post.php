@@ -27,14 +27,19 @@
                 <h4><img src="<?php echo get_the_post_thumbnail_url() ?>"></h4>
                 <p>&nbsp;</p>
                 <?php the_post();
-                        the_content();
-                        ?>
+                the_content();
+                echo get_post_meta($post->ID, 'metatest', true);
+                ?>
+
+                <?php  comments_template(); ?>
+
             </div>
 
             <aside class="side-section">
-                <?php get_sidebar('ownsidebar')?>
+                <?php get_sidebar('ownsidebar') ?>
             </aside>
         </div>
     </div>
+
     </div>
 <?php get_footer(); ?>

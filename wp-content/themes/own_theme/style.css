@@ -1,0 +1,18 @@
+
+.comment-body{
+    border: 1px solid #ccc;
+    margin: 5px;
+    direction: rtl;
+    padding: 3px;
+
+
+}
+
+.commentlist{
+    direction: ltr;
+    list-style: none;
+}
+
+.children{
+    list-style: none;
+}

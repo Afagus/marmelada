@@ -42,10 +42,27 @@ img {
     border: none;
 }
 
-header {
+header{
     background: #415d57;
     border-bottom: 1px solid #ffffff;
 }
+
+/*My redaction start -----------------------------------------*/
+footer{
+    background: #415d57;
+    border-bottom: 1px solid #ffffff;
+}
+.footer-content{
+    direction: ltr;
+    display: flex;
+    font-weight: bold;
+    padding: 25px 0 25px 0;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/*My redaction end -----------------------------------------*/
 
 a {
     text-decoration: none;

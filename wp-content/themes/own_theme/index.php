@@ -26,6 +26,7 @@
                             <a href="<?php the_permalink();?>">המאמר המלא</a>
                         </div>
                     </div>
+
                 <?php endwhile;
             } else {
                 // Постов не найдено
